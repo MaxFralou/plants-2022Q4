@@ -1,0 +1,167 @@
+/* inika-regular - latin */
+@font-face {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./assets/fonts/inika-v21-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./assets/fonts/inika-v21-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inika-700 - latin */
+@font-face {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('./assets/fonts/inika-v21-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./assets/fonts/inika-v21-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/inter-v12-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('./assets/fonts/inter-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('./assets/fonts/inter-v12-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./assets/fonts/inter-v12-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('./assets/fonts/inter-v12-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./assets/fonts/inter-v12-latin-regular.svg#Inter') format('svg');
+    /* Legacy iOS */
+}
+
+/* inter-700 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/inter-v12-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('./assets/fonts/inter-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('./assets/fonts/inter-v12-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./assets/fonts/inter-v12-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('./assets/fonts/inter-v12-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./assets/fonts/inter-v12-latin-700.svg#Inter') format('svg');
+    /* Legacy iOS */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Inter', 'Inika';
+    width: 1440px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    background-color: #EDF2EC;
+    /*scroll-behavior: smooth;*/
+}
+
+/* Header start*/
+
+.header {
+    width: 1220px;
+    margin: 40px 110px 42px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    padding-left: 3px;
+    padding-top: 2px;
+    width: 80px;
+    height: 23px;
+    display: flex;
+    align-items: baseline;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.logo-pic {
+    padding-left: 5px;
+}
+
+.list-nav {
+    display: flex;
+    width: 490px;
+    height: 50px;
+    list-style: none;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+
+.list-home {
+    font-weight: 700;
+    width: 44px;
+}
+
+.list-about {
+
+    width: 100px;
+    margin-left: 52px;
+    margin-right: 44px;
+}
+
+.list-service {
+    width: 55px;
+    padding-left: 3px;
+    margin-right: 43px;
+}
+
+.list-price {
+    width: 38px;
+    padding-left: 4px;
+    margin-right: 41px;
+}
+
+.list-contacts {
+    width: 64px;
+    padding-left: 10px;
+}
+
+.link-nav {
+    text-decoration: none;
+    color: #010201;
+}
+
+.link-nav-color {
+    color: #E06733;
+}
+
+.link-nav:hover, .link-nav:focus, .link-nav:active {
+    opacity: .75;
+}
+/* Header end*/
