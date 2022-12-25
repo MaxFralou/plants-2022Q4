@@ -72,7 +72,9 @@ html {
     box-sizing: inherit;
 }
 
-body {
+
+
+/* body {
     font-family: 'Inter', 'Inika';
     width: 1440px;
     margin: 0 auto;
@@ -80,10 +82,9 @@ body {
     font-weight: 400;
     color: #000000;
     background-color: #EDF2EC;
-    /*scroll-behavior: smooth;*/
-}
+    scroll-behavior: smooth;
+ } 
 
-/* Header start*/
 
 .header {
     width: 1220px;
@@ -163,5 +164,5 @@ body {
 
 .link-nav:hover, .link-nav:focus, .link-nav:active {
     opacity: .75;
-}
-/* Header end*/
+} 
+ */
