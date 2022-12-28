@@ -11,24 +11,25 @@
 </head>
 
 <body class="main-grid">
-
-    <header class="header">
-        <div class="logo">
-            <a href="#" class="logo-link">
-                <img src="./assets/svg/logo-header.svg" alt="Logo Plants" class="logo-pic">
-                <span class="logo-desc">Plants</span>
-            </a>
-        </div>
-        <nav class="nav-header">
-            <ul class="list-nav">
-                <li class="list-home"><a href="#" class="link-nav link-nav-color">Home</a></li>
-                <li class="list-about"><a href="#" class="link-nav">About us</a></li>
-                <li class="list-service"><a href="#" class="link-nav">Service</a></li>
-                <li class="list-price"><a href="#" class="link-nav">Price</a></li>
-                <li class="list-contacts"><a href="#" class="link-nav">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="color-header">
+        <header class="header">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <img src="./assets/svg/logo-header.svg" alt="Logo Plants" class="logo-pic">
+                    <span class="logo-desc">Plants</span>
+                </a>
+            </div>
+            <nav class="nav-header">
+                <ul class="list-nav">
+                    <li class="list-home"><a href="#" class="link-nav link-nav-color">Home</a></li>
+                    <li class="list-about"><a href="#" class="link-nav">About us</a></li>
+                    <li class="list-service"><a href="#" class="link-nav">Service</a></li>
+                    <li class="list-price"><a href="#" class="link-nav">Price</a></li>
+                    <li class="list-contacts"><a href="#" class="link-nav">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
     <main class="main">
 
         <section class="welcome">
@@ -41,22 +42,24 @@
                 <button class="button-welcome">LEARN MORE</button>
             </div>
         </section>
-
-        <section class="about">
-            <div class="about-caption">
-                <h2 class="caption-about"><span class="green">We are</span> professional experienced <span
-                        class="green">gardeners</span></h2>
-                <p class="desc-about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum
-                    has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                    galley
-                    of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-                    also
-                    the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <img src="./assets/img/about-pic.jpg" alt="A flower in a pot" class="about-pic">
-        </section>
-
+        <div class="color-wrapper">
+            <section class="about">
+                <div class="about-caption">
+                    <h2 class="caption-about"><span class="green">We are</span> professional experienced <span
+                            class="green">gardeners</span></h2>
+                    <p class="desc-about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but
+                        also
+                        the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <img src="./assets/img/about-pic.jpg" alt="A flower in a pot" class="about-pic">
+            </section>
+        </div>
         <section class="service">
             <div class="caption-service-container">
                 <h2 class="caption-service">Service and our projects</h2>
@@ -111,47 +114,54 @@
                 </figure>
             </div>
         </section>
-
-        <section class="prices">
-            <div class="caption-prices-contaner">
-                <h2 class="caption-prices">Prices</h2>
-                <p class="help-prices">Our best <span class="green">gardeners</span> are ready to help you</p>
-            </div>
-            <div class="main-button-container">
-                <div class="button-container">
-                    <button class="accordion">Basics</button>
-                    <button class="accordion">Standard</button>
-                    <button class="accordion">Pro care</button>
+        <div class="color-wrapper">
+            <section class="prices">
+                <div class="caption-prices-contaner">
+                    <h2 class="caption-prices">Prices</h2>
+                    <p class="help-prices">Our best <span class="green">gardeners</span> are ready to help you</p>
                 </div>
-                <div class="contact-button-container">
-                    <button class="button-contact">Contact us</button>
-                    <img src="./assets/img/prices-pic.jpg" alt="" class="prices-pic">
+                <div class="main-button-container">
+                    <div class="button-container">
+                        <button class="accordion accord-pic">Basics</button>
+                        <button class="accordion accord-pic2">Standard</button>
+                        <button class="accordion accord-pic3">Pro care</button>
+                    </div>
+                    <div class="contact-button-container">
+                        <button class="button-contact">Contact us</button>
+                        <img src="./assets/img/prices-pic.jpg" alt="" class="prices-pic">
+                    </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
         <section class="contacts">
-            <h2 class="caption-contacts">Contact us</h2>
             <img src="./assets/img/contact_pic.png" alt="" class="contacts-pic">
+            <h2 class="caption-contacts">Contact us</h2>
+
             <button class="accordion-contacts">City</button>
         </section>
     </main>
 
     <footer class="footer">
-        <span class="copy">©</span>
-        <span class="year">2022</span>
-        <span class="git"><a href="#" class="git-link">github</a></span>
-        <span class="rs"><a href="#" class="rs-link">Rolling Scopes School</a></span>
-        <ul class="list-social">
-            <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/inst.svg" alt=""
-                        class="list-pic"></a></li>
-            <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/fb.svg" alt=""
-                        class="list-pic"></a></li>
-            <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/tw.svg" alt=""
-                        class="list-pic"></a></li>
-            <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/pinterest.svg" alt=""
-                        class="list-pic"></a></li>
-        </ul>
+        <div class="copy-container">
+            <span class="copy">©</span>
+            <span class="year">2022</span>
+            <span class="git"><a href="#" class="git-link">github</a></span>
+        </div>
+        <div class="rs-container">
+            <span class="rs"><a href="#" class="rs-link">Rolling Scopes School</a></span>
+        </div>
+        <div class="link-container">
+            <ul class="list-social">
+                <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/inst.svg" alt=""
+                            class="list-pic"></a></li>
+                <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/fb.svg" alt=""
+                            class="list-pic"></a></li>
+                <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/tw.svg" alt=""
+                            class="list-pic"></a></li>
+                <li class="list-item"><a href="#" class="list-link"><img src="./assets/svg/pinterest.svg" alt=""
+                            class="list-pic"></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 
