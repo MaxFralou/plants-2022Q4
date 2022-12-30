@@ -64,6 +64,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -79,7 +80,6 @@ body {
     font-weight: 400;
     color: #000000;
     background-color: #FFFFFF;
-    scroll-behavior: smooth;
 
 }
 
@@ -101,7 +101,9 @@ body {
     grid-area: hd;
     background-color: #EDF2EC;
 }
+
 /* HEADER START*/
+
 .header {
     height: 50px;
     width: 84.7%;
@@ -113,12 +115,12 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-
 }
 
 .logo-link {
     text-decoration: none;
     color: #010201;
+    transition: color 1s;
 }
 
 .logo-link:hover,
@@ -162,6 +164,7 @@ body {
 .link-nav {
     text-decoration: none;
     color: #010201;
+    transition: color 1s;
 }
 
 .link-nav-color {
@@ -176,26 +179,29 @@ body {
     color: #E06733;
     font-weight: 700;
 }
+
 /*HEADER END*/
+
 /*MAIN START*/
+
 .main {
     background-color: #EDF2EC;
     grid-area: main;
 }
-/*WELCOME*/
+
+/*WELCOME START*/
+
 .welcome {
-   
     display: flex;
     width: 84.7%;
     height: 407.36px;
     margin: 30.3px auto;
-
 }
-.welcome-pic{
-   width: 448px;
-   height: 413px;
-   margin-top:30px;
-   
+
+.welcome-pic {
+    width: 448px;
+    height: 413px;
+    margin-top: 30px;
 }
 
 .welcom-caption {
@@ -238,7 +244,7 @@ body {
     color: #000000;
     border-radius: 10px;
     border: #E06733 solid 2px;
-
+    transition: color 1s, background-color 1s;
 }
 
 .button-welcome:hover,
@@ -258,19 +264,17 @@ body {
     height: 666px;
 }
 
-/*ABOUT*/
+/*WELCOME END*/
+
+/*ABOUT START*/
 
 .about {
     background-color: #FFFFFF;
     display: flex;
     align-items: stretch;
-  width: 84.7%;
-  height: 479px;
-  margin: 93.5px auto;
-    
-}
-.about-caption{
-    
+    width: 84.7%;
+    height: 479px;
+    margin: 93.5px auto;
 }
 
 .caption-about {
@@ -297,11 +301,15 @@ body {
 }
 
 .about-pic {
-    margin-top:94px;
+    margin-top: 94px;
     width: 464px;
     height: 479px;
 }
-/*SERVICE*/
+
+/*ABOUT END*/
+
+/*SERVICE START*/
+
 .service {
     width: 84.7%;
     height: 1179px;
@@ -319,7 +327,6 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 .example-container-1-3 {
@@ -333,9 +340,16 @@ body {
     margin-left: 0px;
     border-radius: 20px;
     border: #E3E1D5 solid 1px;
-
+    transition: filter .5s;
 }
-.example-pic{
+
+.example:hover,
+.example:focus,
+.example:active {
+    filter: blur(4px);
+}
+
+.example-pic {
     border-radius: 20px 20px 0 0;
 }
 
@@ -361,7 +375,6 @@ body {
     margin-right: 0px;
     padding-left: 0px;
     margin-left: 40px;
-
 }
 
 .ex-6 {
@@ -393,6 +406,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
+    transition: color 1s, background-color 1s;
 }
 
 .button:hover,
@@ -424,7 +438,6 @@ body {
 .title-fig {
     padding-top: 0px;
     margin-bottom: -2px;
-
     margin-top: 6px;
     font-family: 'Inter';
     font-style: normal;
@@ -433,15 +446,20 @@ body {
     line-height: 20px;
     color: #E06733;
 }
-/*PRICES*/
-.color-wrapper-prices{
+
+/*SERVICE END*/
+
+/*PRICES START*/
+
+.color-wrapper-prices {
     background-color: #FFFFFF;
     height: 560px;
 }
+
 .prices {
-   width: 84.7%;
-   height: 405px;
-   margin: -6px auto 115px auto;
+    width: 84.7%;
+    height: 405px;
+    margin: -6px auto 115px auto;
     background-color: #FFFFFF;
 }
 
@@ -481,7 +499,6 @@ body {
 
 .button-container {
     display: flex;
-
     width: 332px;
     height: 282px;
     border-radius: 20px;
@@ -506,6 +523,7 @@ body {
     border-radius: 20px;
     border: none;
     text-align: center;
+    transition: background-color 1s;
 }
 
 .accordion:hover,
@@ -514,16 +532,6 @@ body {
     opacity: .75;
     background-color: #D6E7D2;
 }
-
-/*.accordion::after{
-    content: "";
-    background-image: url(./assets/svg/accordion-price.svg);
-    background-repeat: no-repeat;
-    padding-left: 20px;
-    margin-left: 20px;
-}*/
-
-
 
 .accord-pic::after {
     content: "";
@@ -549,7 +557,6 @@ body {
     margin-left: 73px;
 }
 
-
 .accordion:first-child {
     padding-left: 41px;
     margin-top: 35px;
@@ -563,7 +570,6 @@ body {
 .accordion:last-child {
     padding-left: 41px;
     padding-right: 94px;
-
 }
 
 .contact-button-container {
@@ -582,12 +588,13 @@ body {
     height: 50px;
     margin-top: 33px;
     margin-bottom: 34px;
-    margin-right:8px;
+    margin-right: 8px;
     font-family: 'Inika';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
+    transition: color 1s, background-color 1s;
 }
 
 .button-contact:hover,
@@ -597,27 +604,27 @@ body {
     color: #FFFFFF;
     background-color: #E06733;
 }
-.prices-pic{
-    
-}
 
-.color-container{
+/*PRICES END*/
+
+.color-container {
     height: 500px;
     background-color: #EDF2EC;
 }
-/*CONTACTS*/
+
+/*CONTACTS START*/
+
 .contacts {
     display: flex;
     justify-content: flex-end;
-   width: 84.7%;
-   height: 500px;
-   margin: 50px auto 0 auto;
-   background-image: url(./assets/img/contact_pic.png);
-   background-repeat: no-repeat;
+    width: 84.7%;
+    height: 500px;
+    margin: 50px auto 0 auto;
+    background-image: url(./assets/img/contact_pic.png);
+    background-repeat: no-repeat;
 }
 
 .contacts-pic {
-   
     margin-top: 19px;
     margin-right: 54px;
     padding-right: 63px;
@@ -657,7 +664,7 @@ body {
     border: none;
     border-radius: 0px;
     background-color: #D6E7D2;
-
+    transition: background-color 1s;
 }
 
 .accordion-contacts::after {
@@ -676,8 +683,11 @@ body {
     background-color: #C1E698;
 }
 
+/*PRICES END*/
+
+/*FOOTER START*/
+
 .footer {
-   
     grid-area: ft;
     display: flex;
     justify-content: space-between;
@@ -685,8 +695,6 @@ body {
     width: 84.7%;
     height: 50px;
     margin: 47px auto;
-   
-
 }
 
 .copy-container {
@@ -727,8 +735,13 @@ body {
     color: #000000;
 }
 
-.rs-container {
+.git-link:hover,
+.git-link:focus,
+.git-link:active {
+    opacity: .5;
+}
 
+.rs-container {
     padding-left: 118px;
     margin-bottom: 11px;
 }
@@ -748,6 +761,12 @@ body {
     color: #000000;
 }
 
+.rs-link:hover,
+.rs-link:focus,
+.rs-link:active {
+    opacity: .5;
+}
+
 .list-social {
     display: flex;
     list-style: none;
@@ -759,6 +778,12 @@ body {
     padding-left: 24px;
 }
 
+.list-link:hover,
+.list-link:focus,
+.list-link:active {
+    opacity: .5;
+}
+
 .list-pic {
     width: 28px;
     height: 28px;
@@ -768,4 +793,4 @@ body {
     margin-right: 4px;
 }
 
-
+/*FOOTER END*/
