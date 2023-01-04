@@ -136,29 +136,19 @@ body {
 }
 
 .list-nav {
+    width: 452px;
     display: flex;
+    justify-content: space-between;
     text-decoration: none;
     list-style: none;
+    padding: 0 23px 0 23px;
 }
 
-.list-home {
-    margin-right: 8px;
-    padding-right: 42px;
+.list-nav:first-child{
+    padding-left: 0;
 }
-
-.list-about {
-    margin-right: 8px;
-    padding-right: 42px;
-}
-
-.list-service {
-    margin-right: 4px;
-    padding-right: 42px;
-}
-
-.list-price {
-    margin-right: 8px;
-    padding-right: 42px;
+.list-nav:last-child{
+    padding-right: 0;
 }
 
 .link-nav {
@@ -635,7 +625,7 @@ body {
     width: 195px;
     margin-left: 0px;
     margin-right: -10px;
-    margin-top: 15px;
+    margin-top: 6px;
     margin-bottom: 439px;
     font-family: 'Inika';
     font-style: normal;
@@ -648,7 +638,7 @@ body {
 .accordion-contacts {
     position: relative;
     margin-left: 70px;
-    margin-top: 103px;
+    margin-top: 94px;
     text-align: start;
     padding-left: 22px;
     width: 450px;
