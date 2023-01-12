@@ -65,6 +65,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 
 *,
@@ -84,7 +85,7 @@ body {
 }
 
 .main-grid {
-    width: 1440px;
+    max-width: 1440px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, auto);
@@ -105,7 +106,7 @@ body {
 /* HEADER START*/
 
 .header {
-    height: 50px;
+    
     width: 84.7%;
     margin: 42px auto;
     display: flex;
@@ -183,14 +184,14 @@ body {
 
 .welcome {
     display: flex;
-    width: 84.7%;
-    height: 407.36px;
+   width: 84.7%;
+   
     margin: 30.3px auto;
 }
 
 .welcome-pic {
-    width: 448px;
-    height: 413px;
+    width: 36%;
+    height:100%;
     margin-top: 30px;
 }
 
@@ -260,16 +261,24 @@ body {
 
 .about {
     background-color: #FFFFFF;
-    display: flex;
+   /* display: flex; */
     align-items: stretch;
     width: 84.7%;
-    height: 479px;
-    margin: 93.5px auto;
+    height: 100%;
+   margin: 93.5px auto;
+   background-image: url(./assets/img/about-pic.jpg);
+   background-repeat: no-repeat;
+   background-position: right;
+  }
+.about-caption{
+    display: flex;
+    flex-direction: column;
 }
 
 .caption-about {
+    width: 49%;
     padding-right: 160px;
-    padding-top: 129px;
+    padding-top: 102px;
     font-family: 'Inika';
     font-style: normal;
     font-weight: 400;
@@ -279,8 +288,8 @@ body {
 }
 
 .desc-about {
-    width: 605px;
-    height: 208px;
+    width: 49%;
+    
     padding-top: 4px;
     font-family: 'Inter';
     font-style: normal;
@@ -292,8 +301,8 @@ body {
 
 .about-pic {
     margin-top: 94px;
-    width: 464px;
-    height: 479px;
+    width: 38%;
+    height: 100%;
 }
 
 /*ABOUT END*/
@@ -302,7 +311,7 @@ body {
 
 .service {
     width: 84.7%;
-    height: 1179px;
+
     margin: 9px auto 121px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -449,7 +458,7 @@ body {
 .prices {
     width: 84.7%;
     height: 405px;
-    margin: -6px auto 115px auto;
+    margin: 0px auto 115px auto;
     background-color: #FFFFFF;
 }
 
@@ -609,17 +618,12 @@ body {
     justify-content: flex-end;
     width: 84.7%;
     height: 500px;
-    margin: 50px auto 0 auto;
+    margin: 55px auto 0 auto;
     background-image: url(./assets/img/contact_pic.png);
     background-repeat: no-repeat;
 }
 
-.contacts-pic {
-    margin-top: 19px;
-    margin-right: 54px;
-    padding-right: 63px;
-    margin-left: 6px;
-}
+
 
 .caption-contacts {
     width: 195px;
@@ -673,7 +677,7 @@ body {
     background-color: #C1E698;
 }
 
-/*PRICES END*/
+/*CONTACTS END*/
 
 /*FOOTER START*/
 
@@ -683,8 +687,7 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     width: 84.7%;
-    height: 50px;
-    margin: 47px auto;
+    margin: 13px auto;
 }
 
 .copy-container {
@@ -784,3 +787,144 @@ body {
 }
 
 /*FOOTER END*/
+
+/* @Media START */
+@media all and (max-width: 1325px) {
+    .about
+
+    .caption-about {
+        display: flex;
+        padding-right: 160px;
+        padding-top: 129px;
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+        color: #E06733;
+    }
+    
+    .desc-about {
+        width: 605px;
+        height: 208px;
+        padding-top: 4px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #636060;
+    }
+    
+    .about-pic {
+        margin-top: 94px;
+        width: 38%;
+        height: 100%;
+    }
+
+    /*SERVICE*/
+
+    .service {
+        width: 84.7%;
+        margin: 9px auto 121px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+       grid-template-areas: 
+       "cap cap"
+       "ex-1 ex-2"
+       "ex-3 ex-4"
+       "ex-5 ex-6";
+    }
+    
+    .caption-service-container {
+        grid-area: cap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .caption-button{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .example {
+        margin-right: 25px;
+        margin-left: 0px;
+        border-radius: 20px;
+        border: #E3E1D5 solid 1px;
+        transition: filter .5s;
+    }
+    
+    .example:hover,
+    .example:focus,
+    .example:active {
+        filter: blur(4px);
+    }
+    
+    .example-pic {
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .ex-1{
+        grid-area: ex-1;
+    }
+      
+    .ex-2 {
+        grid-area: ex-2;
+        margin-right: 0px;
+        padding-left: 0px;
+        
+    }
+    
+    .ex-3 {
+        grid-area: ex-3;
+        margin-right: 0px;
+        padding-left: 0px;
+        
+    }
+    .ex-4 {
+        grid-area: ex-4;
+    }
+
+    .ex-5 {
+        grid-area: ex-5;
+        margin-right: 0px;
+        padding-left: 0px;
+        
+    }
+    
+    .ex-6 {
+        grid-area: ex-6;
+        padding-left: 0px;
+        
+    }
+   
+    .contacts {
+        display: flex;
+        justify-content: flex-end;
+        width: 84.7%;
+        height: 500px;
+        margin: 50px auto 0 auto;
+        background-image: url(./assets/img/contact_pic.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 200px 249px;
+    }
+    
+}
+@media all and (max-width: 1150px) {
+    .about {
+        background-color: #FFFFFF;
+       /* display: flex; */
+        align-items: stretch;
+        width: 84.7%;
+        height: 100%;
+       margin: 93.5px auto;
+       background-image: url(./assets/img/about-pic.jpg);
+       background-repeat: no-repeat;
+       background-position: 100% 25%;
+       background-size: 250px 258px;
+      }
+}
