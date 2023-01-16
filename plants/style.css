@@ -583,6 +583,10 @@ body {
     margin-right: -9px;
 }
 
+.help-prices-380px {
+    display: none;
+}
+
 .button-contact {
     border-radius: 5px;
     background-color: #FFFFFF;
@@ -1170,3 +1174,372 @@ body {
 }
 
 /*@MEDIA 768px END*/
+
+/*@MEDIA 744px to 380px */
+
+@media all and (max-width: 744px) {
+
+    .list-nav {
+        width: 100%;
+    }
+
+    .list-home {
+        padding-right: 5px;
+    }
+
+    .list-about {
+        padding-right: 5px;
+    }
+
+    .list-service {
+        padding-right: 5px;
+    }
+
+    .list-price {
+        padding-right: 5px;
+    }
+
+    .about {
+        width: 86.7%;
+        height: 100%;
+        margin: 93.5px auto;
+        background-position: 50% 100%;
+        background-size: 150px 147px;
+    }
+
+    .color-wrapper-prices {
+        height: 784px;
+    }
+
+    .service {
+        width: 86.7%;
+        margin: 31px auto 90px auto;
+        display: grid;
+        column-gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "cap"
+            "ex-1"
+            "ex-2"
+            "ex-3"
+            "ex-4"
+            "ex-5"
+            "ex-6";
+    }
+
+    .button {
+        margin-bottom: 12px;
+        margin-left: 112px;
+    }
+
+    .help-prices {
+        padding-top: 0px;
+    }
+
+    .main-button-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-top: 54px;
+    }
+
+    .contact-button-container {
+        margin-top: 0px;
+    }
+
+    .accordion-contacts {
+        width: 300px;
+    }
+
+    .accordion-contacts::after {
+        margin-left: 192px;
+    }
+}
+
+/*@MEDIA 380px */
+
+@media all and (max-width: 380px) {
+
+    .main-grid {
+        max-width: 380px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas:
+            "hd"
+            "main"
+            "main"
+            "main"
+            "main"
+            "ft";
+    }
+
+    /* HEADER START*/
+    .header {
+        margin: 34px auto 23px auto;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    /*WELCOME START*/
+
+    .welcome {
+        display: flex;
+        width: 87.7%;
+        margin: 19px auto;
+    }
+
+    .welcom-caption {
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+
+    .caption {
+        font-size: 25px;
+        line-height: 35px;
+        margin-top: 17px;
+        margin-bottom: 0px;
+    }
+
+    .welcome-pic {
+        display: none;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 24px;
+        margin-right: 0px;
+        padding-right: 1px;
+    }
+
+    .button-welcome {
+        width: 100px;
+        height: 34px;
+        margin-top: 18px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    /*ABOUT START*/
+    .color-wrapper {
+        height: 517px;
+    }
+
+    .about {
+        width: 86.7%;
+        height: 100%;
+        margin: 22.5px auto;
+        background-position: 50% 92%;
+        background-size: 150px 155px;
+    }
+
+    h2 {
+        margin-bottom: 0px;
+        margin-top: 19px;
+    }
+
+    .caption-about {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 9px;
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .desc-about {
+        width: 100%;
+        padding-top: 0px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    /*SERVICE START*/
+
+    .service {
+        margin: 12px auto 42px auto;
+    }
+
+    .caption-service {
+        width: 82%;
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .caption-button {
+        margin-top: 34px;
+    }
+
+    .button {
+        width: 121px;
+        height: 35px;
+        margin-left: 0;
+        margin-right: 12px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .example {
+        width: 281px;
+        height: 450px;
+        margin-top: 3px;
+        margin-right: 25px;
+        margin-left: 26px;
+    }
+
+    /*PRICES START*/
+
+    .caption-prices-contaner {
+        justify-content: center;
+    }
+
+    .caption-prices {
+        margin-left: 4px;
+        padding-top: 8px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .help-prices {
+        display: none;
+    }
+
+    .button-container {
+        display: flex;
+        width: 224px;
+        height: 235px;
+        border-radius: 20px;
+        border: #E3E1D5 solid 1px;
+        flex-direction: column;
+        margin-top: 22px;
+        margin-left: 2px;
+    }
+
+    .accordion {
+        position: relative;
+        width: 180px;
+        height: 49px;
+        margin-left: 21px;
+        padding-right: 85px;
+        margin-bottom: 14px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        background-color: #EDF2EC;
+        border-radius: 20px;
+        border: none;
+        text-align: center;
+        transition: background-color 1s;
+    }
+
+    .accordion:first-child {
+        padding-left: 31px;
+        margin-top: 31px;
+    }
+
+    .accord-pic::after {
+        margin-left: 45px;
+    }
+
+    .accordion:nth-child(2) {
+        padding-left: 30px;
+    }
+
+    .accord-pic2::after {
+        margin-left: 27px;
+    }
+
+    .accordion:last-child {
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    .accord-pic3:after {
+        padding-left: 60px;
+        margin-left: 34px;
+    }
+
+    .help-prices-380px {
+        display: block;
+        margin-right: 31px;
+        width: 84%;
+        height: 100%;
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 35px;
+        color: #000000;
+    }
+
+    .button-contact {
+        width: 121px;
+        height: 35px;
+        margin-top: 1px;
+        margin-bottom: 34px;
+        margin-right: 114px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .prices-pic {
+        display: none;
+    }
+
+    .color-container {
+        height: 444px;
+    }
+
+    .contacts {
+        width: 84.7%;
+        height: 100%;
+        margin: -268px auto 0 auto;
+        background-position: 52.5% 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-position: bottom;
+        background-size: 100px 124px;
+    }
+
+    .caption-contacts {
+        width: 42%;
+        margin-left: 0px;
+        margin-right: -10px;
+        margin-top: 23px;
+        margin-bottom: 0px;
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .accordion-contacts {
+        margin-top: 82px;
+    }
+
+    .accordion-contacts::after {
+        margin-left: 201px;
+    }
+
+    .footer {
+        width: 73%;
+        margin: 8px auto;
+    }
+
+    .list-social {
+        margin-top: 3px;
+    }
+}
+
+@media all and (max-width: 355px) {
+    .caption-service-container {
+        width: 86%;
+    }
+}
