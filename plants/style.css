@@ -65,7 +65,6 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 
 *,
@@ -172,6 +171,38 @@ body {
     font-weight: 700;
 }
 
+.burger-btn {
+    display: none;
+    position: absolute;
+    top: 34px;
+    right: 25px;
+    z-index: 30;
+    width: 40px;
+    height: 26px;
+    background-color: transparent;
+    transition: 0.7s;
+}
+
+.burger-lines {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #717171;
+    transition: transform .7s, opacity .7s, top .2s, background-color .5s;
+}
+
+.l2 {
+    top: 8px;
+}
+
+.l3 {
+    top: 16px;
+}
+
+.l4 {
+    top: 24px;
+}
+
 /*HEADER END*/
 
 /*MAIN START*/
@@ -186,7 +217,6 @@ body {
 .welcome {
     display: flex;
     width: 84.7%;
-
     margin: 30.3px auto;
 }
 
@@ -221,7 +251,6 @@ body {
     padding-right: 1px;
 
 }
-
 
 .button-welcome {
     width: 158px;
@@ -1216,7 +1245,8 @@ body {
         margin: 31px auto 90px auto;
         display: grid;
         column-gap: 0;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
         grid-template-areas:
             "cap"
             "ex-1"
@@ -1227,9 +1257,14 @@ body {
             "ex-6";
     }
 
+    .caption-service-container {
+        width: 86%;
+    }
+
     .button {
         margin-bottom: 12px;
-        margin-left: 112px;
+        margin-left: 6px;
+        margin-right: 0px;
     }
 
     .help-prices {
@@ -1279,9 +1314,72 @@ body {
         margin: 34px auto 23px auto;
     }
 
-    .nav-header {
+    /*.nav-header {
         display: none;
+    }*/
+    .list-nav {
+        width: 60%;
+        height: 75%;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        font-size: 25px;
+        line-height: 35px;
+        background-color: #C1E698;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: left 1s;
+        border-radius: 0 10px 10px 0;
+        overflow: auto;
+        z-index: 20;
     }
+
+    .link-nav {
+        padding-left: 25px;
+    }
+
+    .link-nav:hover,
+    .link-nav:focus,
+    .link-nav:active {
+        opacity: .75;
+        color: #E06733;
+        font-weight: 700;
+    }
+
+    .burger-btn {
+        position: fixed;
+        display: block;
+    }
+
+    .active .list-nav {
+        left: 0;
+    }
+
+    .active .l1 {
+        opacity: 0;
+
+    }
+
+    .active .l2 {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+
+    .active .l3 {
+        top: 10px;
+        transform: rotate(-45deg);
+    }
+
+    .active .l4 {
+        opacity: 0;
+
+    }
+
+    .active .burger-lines {
+        background-color: #E06733;
+    }
+
 
     /*WELCOME START*/
 
@@ -1369,6 +1467,11 @@ body {
         font-size: 25px;
         line-height: 33px;
     }
+
+    .caption-service-container {
+        width: 100%;
+    }
+
 
     .caption-button {
         margin-top: 34px;
