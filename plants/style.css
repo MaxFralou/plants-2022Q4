@@ -1643,6 +1643,7 @@ body {
 }
 
 @media all and (max-width: 355px) {
+    
     .caption-service-container {
         width: 86%;
     }
