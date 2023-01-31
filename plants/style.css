@@ -371,14 +371,32 @@ body {
     margin-left: 0px;
     border-radius: 20px;
     border: #E3E1D5 solid 1px;
-    transition: filter .5s;
+    transition: filter .5s, transform .5s;
 }
+
+.click-gardens {
+    filter: blur(4px);
+    
+}
+
+.click-lawn .ex-3{
+    filter: blur(4px);
+    
+}
+
+.click-planting .ex-2 .ex-4 .ex-6{
+    filter: blur(4px);
+    
+}
+
+
 
 .example:hover,
 .example:focus,
 .example:active {
-    filter: blur(4px);
+    transform: scale(1.1);
 }
+
 
 .example-pic {
     width: 329px;
@@ -443,10 +461,12 @@ body {
     transition: color 1s, background-color 1s;
 }
 
-.button:hover,
-.button:focus,
-.button:active {
+.button:hover {
     opacity: .75;
+    cursor: pointer;
+  
+}
+ .click-btn {
     color: #FFFFFF;
     background-color: #E06733;
 }
