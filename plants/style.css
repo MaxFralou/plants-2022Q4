@@ -106,7 +106,6 @@ body {
 /* HEADER START*/
 
 .header {
-
     width: 84.7%;
     margin: 42px auto;
     display: flex;
@@ -159,10 +158,10 @@ body {
     transition: color 1s;
 }
 
-.link-nav-color {
+/* .link-nav-color {
     color: #E06733;
     font-weight: 700;
-}
+} */
 
 .link-nav:hover,
 .link-nav:focus,
@@ -250,7 +249,6 @@ body {
     color: #636060;
     margin-top: 44px;
     padding-right: 1px;
-
 }
 
 .button-welcome {
@@ -263,6 +261,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+    background-color: #EDF2EC;
     border-radius: 10px;
     border: #E06733 solid 2px;
     transition: color 1s, background-color 1s;
@@ -320,7 +319,6 @@ body {
 
 .desc-about {
     width: 49%;
-
     padding-top: 4px;
     font-family: 'Inter';
     font-style: normal;
@@ -366,7 +364,6 @@ body {
 }
 
 .example {
-
     margin-right: 76px;
     margin-left: 0px;
     border-radius: 20px;
@@ -376,27 +373,22 @@ body {
 
 .click-gardens {
     filter: blur(4px);
-    
 }
 
-.click-lawn .ex-3{
+.click-lawn .ex-3 {
     filter: blur(4px);
-    
 }
 
-.click-planting .ex-2 .ex-4 .ex-6{
+.click-planting .ex-2 .ex-4 .ex-6 {
     filter: blur(4px);
-    
+
 }
-
-
 
 .example:hover,
 .example:focus,
 .example:active {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
-
 
 .example-pic {
     width: 329px;
@@ -464,9 +456,9 @@ body {
 .button:hover {
     opacity: .75;
     cursor: pointer;
-  
 }
- .click-btn {
+
+.click-btn {
     color: #FFFFFF;
     background-color: #E06733;
 }
@@ -507,12 +499,12 @@ body {
 
 .color-wrapper-prices {
     background-color: #FFFFFF;
-    height: 560px;
+    height: 580px;
 }
 
 .prices {
     width: 84.7%;
-    height: 405px;
+    height: auto;
     margin: 0px auto 115px auto;
     background-color: #FFFFFF;
 }
@@ -554,10 +546,12 @@ body {
 .button-container {
     display: flex;
     width: 332px;
-    height: 282px;
+    height: auto;
     border-radius: 20px;
     border: #E3E1D5 solid 1px;
     flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
 
 .accordion {
@@ -566,7 +560,8 @@ body {
     height: 50px;
     margin-left: 39px;
     padding-right: 85px;
-    margin-bottom: 32px;
+    padding-left: 40px;
+    margin-bottom: 0;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -574,20 +569,26 @@ body {
     line-height: 20px;
     color: #000000;
     background-color: #EDF2EC;
+    background-image: url(./assets/svg/accordion-price.svg);
+    background-repeat: no-repeat;
+    background-position: right 40px top 50%, 0 0;
     border-radius: 20px;
     border: none;
     text-align: center;
-    transition: background-color 1s;
+    transition: background-color .5s, background-image .5s;
 }
 
-.accordion:hover,
-.accordion:focus,
-.baccordion:active {
-    opacity: .75;
+.accordion:hover {
+    cursor: pointer;
+    transform: scale(1.01)
+}
+
+.click-btn-accordion {
     background-color: #D6E7D2;
+    background-image: url(./assets/svg/accordion-btn-active.svg);
 }
 
-.accord-pic::after {
+/* .accord-pic::after {
     content: "";
     background-image: url(./assets/svg/accordion-price.svg);
     background-repeat: no-repeat;
@@ -609,7 +610,7 @@ body {
     background-repeat: no-repeat;
     padding-left: 20px;
     margin-left: 73px;
-}
+} */
 
 .accordion:first-child {
     padding-left: 41px;
@@ -626,6 +627,95 @@ body {
     padding-right: 94px;
 }
 
+/* accordion style */
+/* .basic-content{
+    position: absolute;
+} */
+.accordion-container-style.is-open {
+    height: 128px;
+    overflow: visible;
+}
+
+.accordion-container-style {
+    width: 250px;
+    margin-top: -15px;
+    padding-left: 40px;
+    margin-bottom: 28px;
+    background-color: #D6E7D2;
+    border-radius: 0 0 20px 20px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.basic-desc {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+
+}
+
+.standart-desc {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+}
+
+.pro-desc {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+}
+
+.desc-accordion {
+    width: 70%;
+    padding-top: 7px;
+    border-top: 0.5px solid #AEA1A1
+}
+
+.dollar-accord {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #E06733;
+}
+
+.price-accord {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E06733;
+}
+
+.price-style {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.basic-link-container {
+    width: 86px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 12px 0 12px 0;
+    background-color: #FFFFFF;
+}
+
+.link-style {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+}
+
+/* accordion style end */
 .contact-button-container {
     display: flex;
     flex-direction: column;
@@ -676,7 +766,7 @@ body {
     display: flex;
     justify-content: flex-end;
     width: 84.7%;
-    height: 500px;
+    height: auto;
     margin: 55px auto 0 auto;
     background-image: url(./assets/img/contact_pic.png);
     background-repeat: no-repeat;
@@ -932,7 +1022,7 @@ body {
         display: flex;
         justify-content: flex-end;
         width: 84.7%;
-        height: 500px;
+        height: auto;
         margin: 50px auto 0 auto;
         background-image: url(./assets/img/contact_pic.png);
         background-repeat: no-repeat;
@@ -1126,14 +1216,14 @@ body {
     }
 
     .color-wrapper-prices {
-        height: 583px;
+        height: 535px;
     }
 
     /*PRICES*/
 
     .prices {
         width: 86.7%;
-        height: 405px;
+        height: auto;
         margin: 0px auto 115px auto;
         margin-top: -35px;
     }
@@ -1535,7 +1625,7 @@ body {
     .button-container {
         display: flex;
         width: 224px;
-        height: 235px;
+        height: auto;
         border-radius: 20px;
         border: #E3E1D5 solid 1px;
         flex-direction: column;
@@ -1548,7 +1638,7 @@ body {
         width: 180px;
         height: 49px;
         margin-left: 21px;
-        padding-right: 85px;
+        padding-right: 76px;
         margin-bottom: 14px;
         font-family: 'Inter';
         font-style: normal;
@@ -1563,8 +1653,31 @@ body {
         transition: background-color 1s;
     }
 
+    .click-btn-accordion {
+        background-color: #D6E7D2;
+        background-image: url(./assets/svg/accordion-btn-active.svg);
+    }
+
+    .accordion-container-style {
+        width: 180px;
+        margin-top: -31px;
+        padding-left: 40px;
+        margin-bottom: 28px;
+        background-color: #D6E7D2;
+        border-radius: 0 0 20px 20px;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        z-index: 1;
+    }
+
+    .accordion-container-style.is-open {
+        height: 152px;
+        overflow: visible;
+    }
+
     .accordion:first-child {
-        padding-left: 31px;
+        padding-left: 41px;
         margin-top: 31px;
     }
 
@@ -1663,7 +1776,7 @@ body {
 }
 
 @media all and (max-width: 355px) {
-    
+
     .caption-service-container {
         width: 86%;
     }
