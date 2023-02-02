@@ -1,8 +1,7 @@
-console.log(` Score: 85 / 75\n
-- [x] The layout valid 768px (24/24)\n
-- [x] The layout valid 380px (24/24)\n
-- [x] No horizontal scroll bar (15/15)\n
-- [x] Adaptive menu is implemented (22/22)`);
+console.log(`Plants#3 Score: 125 / 100\n
+- [x] When you click on the buttons:Gardens,Lawn,Planting the focus changes to services in the service section (50/50)\n
+- [x] Accordion in the prices section implementation of 3 drop-down lists about services and prices (50/50)\n
+- [x] In the contacts section select with a choice of cities is implemented (25/25)`);
 
 const burger = document.querySelector('.burger-btn')
 const menu = document.querySelector('.header')
@@ -163,46 +162,110 @@ PLANTING_BTN.addEventListener('click', function () {
     }
 })
 
-const ACCORDION_BTNS_BASICS = document.querySelector(".accord-pic");
-const ACCORDION_BTNS_STANDART = document.querySelector(".accord-pic2");
-const ACCORDION_BTNS_PRO = document.querySelector(".accord-pic3");
-const basicContent = document.querySelector(".basic-content")
-const standartContent = document.querySelector(".standart-content")
-const proContent = document.querySelector(".pro-content")
+// const ACCORDION_BTNS_BASICS = document.querySelector(".accord-pic");
+// const ACCORDION_BTNS_STANDART = document.querySelector(".accord-pic2");
+// const ACCORDION_BTNS_PRO = document.querySelector(".accord-pic3");
+// const basicContent = document.querySelector(".basic-content")
+// const standartContent = document.querySelector(".standart-content")
+// const proContent = document.querySelector(".pro-content")
 
-ACCORDION_BTNS_BASICS.addEventListener('click', function () {
-    if (standartContent.classList.contains('is-open') ||
-        proContent.classList.contains('is-open')) {
-        standartContent.classList.remove('is-open') ||
-            proContent.classList.remove('is-open')
-        ACCORDION_BTNS_STANDART.classList.remove('click-btn-accordion')
-        ACCORDION_BTNS_PRO.classList.remove('click-btn-accordion')
+// ACCORDION_BTNS_BASICS.addEventListener('click', function () {
+//     if (standartContent.classList.contains('is-open') ||
+//         proContent.classList.contains('is-open')) {
+//         standartContent.classList.remove('is-open') ||
+//             proContent.classList.remove('is-open')
+//         ACCORDION_BTNS_STANDART.classList.remove('click-btn-accordion')
+//         ACCORDION_BTNS_PRO.classList.remove('click-btn-accordion')
+//     }
+//     basicContent.classList.toggle('is-open')
+//     ACCORDION_BTNS_BASICS.classList.toggle('click-btn-accordion')
+// })
+
+// ACCORDION_BTNS_STANDART.addEventListener('click', function () {
+//     if (basicContent.classList.contains('is-open') ||
+//         proContent.classList.contains('is-open')) {
+//         basicContent.classList.remove('is-open') ||
+//             proContent.classList.remove('is-open')
+//         ACCORDION_BTNS_BASICS.classList.remove('click-btn-accordion')
+//         ACCORDION_BTNS_PRO.classList.remove('click-btn-accordion')
+//     }
+//     standartContent.classList.toggle('is-open')
+//     ACCORDION_BTNS_STANDART.classList.toggle('click-btn-accordion')
+// })
+
+// ACCORDION_BTNS_PRO.addEventListener('click', function () {
+//     if (basicContent.classList.contains('is-open') ||
+//         standartContent.classList.contains('is-open')) {
+//         basicContent.classList.remove('is-open') ||
+//             standartContent.classList.remove('is-open')
+//         ACCORDION_BTNS_BASICS.classList.remove('click-btn-accordion')
+//         ACCORDION_BTNS_STANDART.classList.remove('click-btn-accordion')
+//     }
+
+//     proContent.classList.toggle('is-open')
+//     ACCORDION_BTNS_PRO.classList.toggle('click-btn-accordion')
+// })
+const accordionBtns = document.querySelectorAll(".accordion");
+const accordionContents = [
+    document.querySelector(".basic-content"),
+    document.querySelector(".standart-content"),
+    document.querySelector(".pro-content")
+];
+
+accordionBtns.forEach((accordionBtn, index) => {
+    accordionBtn.addEventListener("click", event => {
+        const currentBtn = event.currentTarget;
+        const currentContent = accordionContents[index];
+        const openClass = "is-open";
+        const activeClass = "click-btn-accordion";
+
+        if (currentContent.classList.contains(openClass)) {
+            currentContent.classList.remove(openClass);
+            currentBtn.classList.remove(activeClass);
+        } else {
+            accordionContents.forEach(content => {
+                content.classList.remove(openClass);
+            });
+            accordionBtns.forEach(btn => {
+                btn.classList.remove(activeClass);
+            });
+            currentContent.classList.add(openClass);
+            currentBtn.classList.add(activeClass);
+        }
+    })
+});
+
+const selectedItem = document.querySelector('.accordion-contacts');
+const dropdownContent = document.querySelector('.dropdown-content');
+const addressBlock = document.querySelector('.address-block');
+const address = document.querySelector('.address');
+const phone = document.querySelector('.phone');
+const city = document.querySelector('.city');
+const call = document.querySelector('.call');
+
+selectedItem.addEventListener('click', () => {
+    dropdownContent.style.display = dropdownContent.style.display === 'flex' ? 'none' : 'flex';
+});
+
+dropdownContent.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.classList.contains('dropdown-item')) {
+        return;
     }
-    basicContent.classList.toggle('is-open')
-    ACCORDION_BTNS_BASICS.classList.toggle('click-btn-accordion')
-})
 
-ACCORDION_BTNS_STANDART.addEventListener('click', function () {
-    if (basicContent.classList.contains('is-open') ||
-        proContent.classList.contains('is-open')) {
-        basicContent.classList.remove('is-open') ||
-            proContent.classList.remove('is-open')
-        ACCORDION_BTNS_BASICS.classList.remove('click-btn-accordion')
-        ACCORDION_BTNS_PRO.classList.remove('click-btn-accordion')
+    selectedItem.innerHTML = target.innerHTML;
+    dropdownContent.style.display = 'none';
+
+    addressBlock.style.display = 'flex';
+    address.innerHTML = target.dataset.address;
+    phone.innerHTML = target.dataset.phone;
+    city.innerHTML = target.dataset.city;
+    call.href = 'tel:' + target.dataset.phone;
+    if (window.matchMedia("(max-width: 380px)").matches) {
+        if (addressBlock.style.display == 'flex') {
+            let contacts = document.querySelector('.contacts');
+            contacts.style.backgroundImage = 'none';
+        }
     }
-    standartContent.classList.toggle('is-open')
-    ACCORDION_BTNS_STANDART.classList.toggle('click-btn-accordion')
-})
+});
 
-ACCORDION_BTNS_PRO.addEventListener('click', function () {
-    if (basicContent.classList.contains('is-open') ||
-        standartContent.classList.contains('is-open')) {
-        basicContent.classList.remove('is-open') ||
-            standartContent.classList.remove('is-open')
-        ACCORDION_BTNS_BASICS.classList.remove('click-btn-accordion')
-        ACCORDION_BTNS_STANDART.classList.remove('click-btn-accordion')
-    }
-
-    proContent.classList.toggle('is-open')
-    ACCORDION_BTNS_PRO.classList.toggle('click-btn-accordion')
-})
