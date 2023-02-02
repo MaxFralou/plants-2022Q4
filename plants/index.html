@@ -28,7 +28,7 @@
                     <li class="list-contacts"><a href="#contacts" class="link-nav">Contacts</a></li>
                 </ul>
             </nav>
-            
+
             <div class="burger-btn">
                 <span class="burger-lines l1"></span>
                 <span class="burger-lines l2"></span>
@@ -73,27 +73,27 @@
             <div class="caption-service-container">
                 <h2 class="caption-service">Service and our projects</h2>
                 <div class="caption-button">
-                    <button class="button">Gardens</button>
-                    <button class="button">Lawn</button>
-                    <button class="button">Planting</button>
+                    <button class="button" id="gardens-btn">Gardens</button>
+                    <button class="button" id="lawn-btn">Lawn</button>
+                    <button class="button" id="planting-btn">Planting</button>
                 </div>
             </div>
 
-            <figure class="example ex-1">
+            <figure class="example ex-1" id="ex-1">
                 <img src="./assets/img/service-pic1.jpg" alt="" class="example-pic">
                 <figcaption class="example-fig">
                     <h3 class="title-fig">Garden care</h3>
                     <p class="desc-fig">Lorem Ipsum has been the industry</p>
                 </figcaption>
             </figure>
-            <figure class="example ex-2" style="margin-top: 15px;">
+            <figure class="example ex-2" id="ex-2" style="margin-top: 15px;">
                 <img src="./assets/img/service-pic2.jpg" alt="" class="example-pic">
                 <figcaption class="example-fig">
                     <h3 class="title-fig">Planting</h3>
                     <p class="desc-fig">Lorem Ipsum has been the industry</p>
                 </figcaption>
             </figure>
-            <figure class="example ex-3" style="margin-top: 15px;">
+            <figure class="example ex-3" id="ex-3" style="margin-top: 15px;">
                 <img src="./assets/img/service-pic3.jpg" alt="" class="example-pic">
                 <figcaption class="example-fig">
                     <h3 class="title-fig">Lawn care</h3>
@@ -102,21 +102,21 @@
             </figure>
 
 
-            <figure class="example ex-4" style="margin-top: 18px;">
+            <figure class="example ex-4" id="ex-4" style="margin-top: 18px;">
                 <img src="./assets/img/service-pic4.jpg" alt="" class="example-pic">
                 <figcaption class="example-fig">
                     <h3 class="title-fig">Planting</h3>
                     <p class="desc-fig">Lorem Ipsum has been the industry</p>
                 </figcaption>
             </figure>
-            <figure class="example ex-5" style="margin-top: 15px;">
+            <figure class="example ex-5" id="ex-5" style="margin-top: 15px;">
                 <img src="./assets/img/service-pic5.jpg" alt="" class="example-pic">
                 <figcaption class="example-fig">
                     <h3 class="title-fig">Garden care</h3>
                     <p class="desc-fig">Lorem Ipsum has been the industry</p>
                 </figcaption>
             </figure>
-            <figure class="example ex-6" style="margin-top: 17px;">
+            <figure class="example ex-6" id="ex-6" style="margin-top: 17px;">
                 <img src="./assets/img/service-pic6.jpg" alt="" class="example-pic">
                 <figcaption class="example-fig">
                     <h3 class="title-fig">Planting</h3>
@@ -134,8 +134,32 @@
                 <div class="main-button-container">
                     <div class="button-container">
                         <button class="accordion accord-pic">Basics</button>
+                        <div class="basic-content accordion-container-style">
+                            <p class="basic-desc desc-accordion">Release of Letraset sheets containing Lorem Ipsum
+                                passages, and more recently</p>
+                            <div class="basic-price price-style"><span class="dollar-accord">$</span><span
+                                    class="price-accord">15</span> / per hour </div>
+                            <div class="basic-link-container"><a href="#contacts"
+                                    class="basic-link link-style">Order</a></div>
+                        </div>
                         <button class="accordion accord-pic2">Standard</button>
+                        <div class="standart-content accordion-container-style">
+                            <p class="standart-desc desc-accordion">Release of Letraset sheets containing Lorem Ipsum
+                                passages, and more recently</p>
+                            <div class="standart-price price-style"><span class="dollar-accord">$</span><span
+                                    class="price-accord">25</span> / per hour</div>
+                            <div class="basic-link-container"><a href="#contacts"
+                                    class="standart-link link-style">Order</a></div>
+                        </div>
                         <button class="accordion accord-pic3">Pro care</button>
+                        <div class="pro-content accordion-container-style">
+                            <p class="pro-desc desc-accordion">Release of Letraset sheets containing Lorem Ipsum
+                                passages, and more recently</p>
+                            <div class="pro-price price-style"><span class="dollar-accord">$</span><span
+                                    class="price-accord">35</span> / per hour</div>
+                            <div class="basic-link-container"><a href="#contacts" class="pro-link link-style">Order</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="contact-button-container">
                         <p class="help-prices-380px">Our best <span class="green">gardeners</span> are ready to help you
@@ -151,7 +175,32 @@
         <div class="color-container">
             <section class="contacts" id="contacts">
                 <h2 class="caption-contacts">Contact us</h2>
-                <button class="accordion-contacts">City</button>
+                <div class="container-button-contact">
+                    <button class="accordion-contacts">City</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item" data-address="151 Charlotte Street" data-phone="+1	585	393 0001"
+                            data-city="Canandaigua, NY">Canandaigua, NY</div>
+                        <div class="dropdown-item" data-address="9 East 91st Street" data-phone="+1	212	456 0002"
+                            data-city="New York City">New York City</div>
+                        <div class="dropdown-item" data-address="511 Warburton Ave" data-phone="+1	914	678 0003"
+                            data-city="Yonkers, NY">Yonkers, NY</div>
+                        <div class="dropdown-item" data-address="14 WEST Noyes BLVD" data-phone="+1	315	908 0004"
+                            data-city="Sherrill, NY">Sherrill, NY</div>
+                    </div>
+                    <div class="address-block">
+                        <div class="desc-adress-block">
+                            <div class="item-desc">City:</div>
+                            <div class="item-desc">Phone:</div>
+                            <div class="item-desc">Office adress:</div>
+                        </div>
+                        <div class="content-address-block">
+                            <div class="city">Not selected</div>
+                            <div class="phone">Not selected</div>
+                            <div class="address">Not selected</div>
+                            <a href="" class="call">Call us</a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>

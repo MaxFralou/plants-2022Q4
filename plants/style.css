@@ -106,7 +106,6 @@ body {
 /* HEADER START*/
 
 .header {
-
     width: 84.7%;
     margin: 42px auto;
     display: flex;
@@ -159,10 +158,10 @@ body {
     transition: color 1s;
 }
 
-.link-nav-color {
+/* .link-nav-color {
     color: #E06733;
     font-weight: 700;
-}
+} */
 
 .link-nav:hover,
 .link-nav:focus,
@@ -250,7 +249,6 @@ body {
     color: #636060;
     margin-top: 44px;
     padding-right: 1px;
-
 }
 
 .button-welcome {
@@ -263,6 +261,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+    background-color: #EDF2EC;
     border-radius: 10px;
     border: #E06733 solid 2px;
     transition: color 1s, background-color 1s;
@@ -320,7 +319,6 @@ body {
 
 .desc-about {
     width: 49%;
-
     padding-top: 4px;
     font-family: 'Inter';
     font-style: normal;
@@ -366,18 +364,30 @@ body {
 }
 
 .example {
-
     margin-right: 76px;
     margin-left: 0px;
     border-radius: 20px;
     border: #E3E1D5 solid 1px;
-    transition: filter .5s;
+    transition: filter .5s, transform .5s;
+}
+
+.click-gardens {
+    filter: blur(4px);
+}
+
+.click-lawn .ex-3 {
+    filter: blur(4px);
+}
+
+.click-planting .ex-2 .ex-4 .ex-6 {
+    filter: blur(4px);
+
 }
 
 .example:hover,
 .example:focus,
 .example:active {
-    filter: blur(4px);
+    transform: scale(1.01);
 }
 
 .example-pic {
@@ -443,10 +453,12 @@ body {
     transition: color 1s, background-color 1s;
 }
 
-.button:hover,
-.button:focus,
-.button:active {
+.button:hover {
     opacity: .75;
+    cursor: pointer;
+}
+
+.click-btn {
     color: #FFFFFF;
     background-color: #E06733;
 }
@@ -487,12 +499,12 @@ body {
 
 .color-wrapper-prices {
     background-color: #FFFFFF;
-    height: 560px;
+    height: 580px;
 }
 
 .prices {
     width: 84.7%;
-    height: 405px;
+    height: auto;
     margin: 0px auto 115px auto;
     background-color: #FFFFFF;
 }
@@ -534,10 +546,12 @@ body {
 .button-container {
     display: flex;
     width: 332px;
-    height: 282px;
+    height: auto;
     border-radius: 20px;
     border: #E3E1D5 solid 1px;
     flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
 
 .accordion {
@@ -546,7 +560,8 @@ body {
     height: 50px;
     margin-left: 39px;
     padding-right: 85px;
-    margin-bottom: 32px;
+    padding-left: 40px;
+    margin-bottom: 0;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -554,20 +569,26 @@ body {
     line-height: 20px;
     color: #000000;
     background-color: #EDF2EC;
+    background-image: url(./assets/svg/accordion-price.svg);
+    background-repeat: no-repeat;
+    background-position: right 40px top 50%, 0 0;
     border-radius: 20px;
     border: none;
     text-align: center;
-    transition: background-color 1s;
+    transition: background-color .5s, background-image .5s;
 }
 
-.accordion:hover,
-.accordion:focus,
-.baccordion:active {
-    opacity: .75;
+.accordion:hover {
+    cursor: pointer;
+    transform: scale(1.01)
+}
+
+.click-btn-accordion {
     background-color: #D6E7D2;
+    background-image: url(./assets/svg/accordion-btn-active.svg);
 }
 
-.accord-pic::after {
+/* .accord-pic::after {
     content: "";
     background-image: url(./assets/svg/accordion-price.svg);
     background-repeat: no-repeat;
@@ -589,7 +610,7 @@ body {
     background-repeat: no-repeat;
     padding-left: 20px;
     margin-left: 73px;
-}
+} */
 
 .accordion:first-child {
     padding-left: 41px;
@@ -606,6 +627,95 @@ body {
     padding-right: 94px;
 }
 
+/* accordion style */
+/* .basic-content{
+    position: absolute;
+} */
+.accordion-container-style.is-open {
+    height: 128px;
+    overflow: visible;
+}
+
+.accordion-container-style {
+    width: 250px;
+    margin-top: -15px;
+    padding-left: 40px;
+    margin-bottom: 28px;
+    background-color: #D6E7D2;
+    border-radius: 0 0 20px 20px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.basic-desc {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+
+}
+
+.standart-desc {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+}
+
+.pro-desc {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+}
+
+.desc-accordion {
+    width: 70%;
+    padding-top: 7px;
+    border-top: 0.5px solid #AEA1A1
+}
+
+.dollar-accord {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #E06733;
+}
+
+.price-accord {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E06733;
+}
+
+.price-style {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.basic-link-container {
+    width: 86px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 12px 0 12px 0;
+    background-color: #FFFFFF;
+}
+
+.link-style {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+}
+
+/* accordion style end */
 .contact-button-container {
     display: flex;
     flex-direction: column;
@@ -656,7 +766,7 @@ body {
     display: flex;
     justify-content: flex-end;
     width: 84.7%;
-    height: 500px;
+    height: auto;
     margin: 55px auto 0 auto;
     background-image: url(./assets/img/contact_pic.png);
     background-repeat: no-repeat;
@@ -678,9 +788,18 @@ body {
     color: #499A18;
 }
 
+.container-button-contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .accordion-contacts {
     position: relative;
-    margin-left: 70px;
+    margin-left: 29px;
+    margin-right: 29px;
     margin-top: 94px;
     text-align: start;
     padding-left: 22px;
@@ -696,10 +815,16 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 0px;
+    cursor: pointer;
     background-color: #D6E7D2;
-    transition: background-color 1s;
+    background-image: url(./assets/svg/accordion-contacts.svg);
+    background-repeat: no-repeat;
+    background-position: 92% 44%;
+    transition: background-color 1s, background-image 1s;
+    z-index: 2;
 }
 
+/* 
 .accordion-contacts::after {
     content: "";
     background-image: url(./assets/svg/accordion-contacts.svg);
@@ -707,13 +832,105 @@ body {
     padding-left: 20px;
     margin-left: 337px;
     margin-bottom: 0;
-}
+} */
 
 .accordion-contacts:hover,
 .accordion-contacts:focus,
 .baccordion-contacts:active {
-    opacity: .75;
+
     background-color: #C1E698;
+    background-image: url(./assets/svg/accordion-contacts-active.svg);
+    background-repeat: no-repeat;
+    background-position: 92% 44%;
+}
+
+.dropdown-content {
+
+    width: 89%;
+    height: 284px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #499A18;
+    background-color: #DCE9D9;
+    margin-top: -20px;
+    padding: 30px 50px 30px 20px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 5%;
+    display: none;
+
+    transition: all 1s ease-in-out;
+    z-index: 1;
+
+}
+
+.dropdown-content.show {
+    display: flex;
+    opacity: 1;
+}
+
+.dropdown-item {
+    border-bottom: 1px #D9D9D9 solid;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    color: #717171;
+}
+
+.address-block {
+
+    position: absolute;
+    top: 42%;
+    width: 89%;
+    height: 214px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #EDF2EC;
+    border: 1px #000000 solid;
+    border-radius: 20px;
+    display: none;
+    transition: all 1s;
+
+}
+
+.desc-adress-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 17px;
+    padding-left: 33px;
+    width: 35%;
+    font-size: 16px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.content-address-block {
+    width: 65%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    color: #717171;
+    padding-top: 17px;
+}
+
+.call {
+    display: block;
+    width: 122px;
+    height: 26px;
+    border: 1px #E06733 solid;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-top: 17px;
+    font-family: 'Inika';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    text-decoration: none;
+    color: #717171;
 }
 
 /*CONTACTS END*/
@@ -870,7 +1087,7 @@ body {
     .example:hover,
     .example:focus,
     .example:active {
-        filter: blur(4px);
+        transform: scale(1.01);
     }
 
     .example-pic {
@@ -912,7 +1129,7 @@ body {
         display: flex;
         justify-content: flex-end;
         width: 84.7%;
-        height: 500px;
+        height: auto;
         margin: 50px auto 0 auto;
         background-image: url(./assets/img/contact_pic.png);
         background-repeat: no-repeat;
@@ -1106,14 +1323,14 @@ body {
     }
 
     .color-wrapper-prices {
-        height: 583px;
+        height: 535px;
     }
 
     /*PRICES*/
 
     .prices {
         width: 86.7%;
-        height: 405px;
+        height: auto;
         margin: 0px auto 115px auto;
         margin-top: -35px;
     }
@@ -1154,6 +1371,10 @@ body {
         align-items: center;
     }
 
+    .container-button-contact {
+        margin-left: 55px;
+    }
+
     .caption-contacts {
         margin-left: 0px;
         margin-right: -4px;
@@ -1164,6 +1385,12 @@ body {
     .accordion-contacts {
         margin-left: -4px;
         margin-top: 98px;
+    }
+
+    .address-block {
+        top: 120%;
+        right: 6%;
+        width: 95%;
     }
 
     /*FOOTER*/
@@ -1515,7 +1742,7 @@ body {
     .button-container {
         display: flex;
         width: 224px;
-        height: 235px;
+        height: auto;
         border-radius: 20px;
         border: #E3E1D5 solid 1px;
         flex-direction: column;
@@ -1528,7 +1755,7 @@ body {
         width: 180px;
         height: 49px;
         margin-left: 21px;
-        padding-right: 85px;
+        padding-right: 76px;
         margin-bottom: 14px;
         font-family: 'Inter';
         font-style: normal;
@@ -1543,8 +1770,31 @@ body {
         transition: background-color 1s;
     }
 
+    .click-btn-accordion {
+        background-color: #D6E7D2;
+        background-image: url(./assets/svg/accordion-btn-active.svg);
+    }
+
+    .accordion-container-style {
+        width: 180px;
+        margin-top: -31px;
+        padding-left: 40px;
+        margin-bottom: 28px;
+        background-color: #D6E7D2;
+        border-radius: 0 0 20px 20px;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        z-index: 1;
+    }
+
+    .accordion-container-style.is-open {
+        height: 152px;
+        overflow: visible;
+    }
+
     .accordion:first-child {
-        padding-left: 31px;
+        padding-left: 41px;
         margin-top: 31px;
     }
 
@@ -1614,6 +1864,7 @@ body {
         background-size: 100px 124px;
     }
 
+
     .caption-contacts {
         width: 42%;
         margin-left: 0px;
@@ -1625,11 +1876,16 @@ body {
     }
 
     .accordion-contacts {
-        margin-top: 82px;
+        margin-top: 62px;
     }
 
     .accordion-contacts::after {
         margin-left: 201px;
+    }
+
+    .address-block {
+        right: 10%;
+        width: 90%;
     }
 
     .footer {
@@ -1643,6 +1899,7 @@ body {
 }
 
 @media all and (max-width: 355px) {
+
     .caption-service-container {
         width: 86%;
     }
