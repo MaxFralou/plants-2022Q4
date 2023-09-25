@@ -158,11 +158,6 @@ body {
     transition: color 1s;
 }
 
-/* .link-nav-color {
-    color: #E06733;
-    font-weight: 700;
-} */
-
 .link-nav:hover,
 .link-nav:focus,
 .link-nav:active {
@@ -290,7 +285,6 @@ body {
 
 .about {
     background-color: #FFFFFF;
-    /* display: flex; */
     align-items: stretch;
     width: 84.7%;
     height: 100%;
@@ -327,12 +321,6 @@ body {
     line-height: 30px;
     color: #636060;
 }
-
-/*.about-pic {
-    margin-top: 94px;
-    width: 38%;
-    height: 100%;
-}*/
 
 /*ABOUT END*/
 
@@ -588,30 +576,6 @@ body {
     background-image: url(./assets/svg/accordion-btn-active.svg);
 }
 
-/* .accord-pic::after {
-    content: "";
-    background-image: url(./assets/svg/accordion-price.svg);
-    background-repeat: no-repeat;
-    padding-left: 20px;
-    margin-left: 90px;
-}
-
-.accord-pic2::after {
-    content: "";
-    background-image: url(./assets/svg/accordion-price.svg);
-    background-repeat: no-repeat;
-    padding-left: 20px;
-    margin-left: 64px;
-}
-
-.accord-pic3:after {
-    content: "";
-    background-image: url(./assets/svg/accordion-price.svg);
-    background-repeat: no-repeat;
-    padding-left: 20px;
-    margin-left: 73px;
-} */
-
 .accordion:first-child {
     padding-left: 41px;
     margin-top: 35px;
@@ -627,10 +591,6 @@ body {
     padding-right: 94px;
 }
 
-/* accordion style */
-/* .basic-content{
-    position: absolute;
-} */
 .accordion-container-style.is-open {
     height: 128px;
     overflow: visible;
@@ -824,16 +784,6 @@ body {
     z-index: 2;
 }
 
-/* 
-.accordion-contacts::after {
-    content: "";
-    background-image: url(./assets/svg/accordion-contacts.svg);
-    background-repeat: no-repeat;
-    padding-left: 20px;
-    margin-left: 337px;
-    margin-bottom: 0;
-} */
-
 .accordion-contacts:hover,
 .accordion-contacts:focus,
 .baccordion-contacts:active {
@@ -845,7 +795,6 @@ body {
 }
 
 .dropdown-content {
-
     width: 89%;
     height: 284px;
     display: flex;
@@ -860,7 +809,6 @@ body {
     font-weight: 400;
     letter-spacing: 5%;
     display: none;
-
     transition: all 1s ease-in-out;
     z-index: 1;
 
@@ -881,7 +829,6 @@ body {
 }
 
 .address-block {
-
     position: absolute;
     top: 42%;
     width: 89%;
@@ -893,7 +840,6 @@ body {
     border-radius: 20px;
     display: none;
     transition: all 1s;
-
 }
 
 .desc-adress-block {
@@ -1055,7 +1001,6 @@ body {
         margin: 9px auto 121px auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
         grid-template-areas:
             "cap cap"
             "ex-1 ex-2"
@@ -1542,9 +1487,6 @@ body {
         margin: 34px auto 23px auto;
     }
 
-    /*.nav-header {
-        display: none;
-    }*/
     .list-nav {
         width: 60%;
         height: 75%;
@@ -1650,6 +1592,7 @@ body {
     }
 
     /*ABOUT START*/
+    
     .color-wrapper {
         height: 517px;
     }

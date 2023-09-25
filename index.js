@@ -1,8 +1,3 @@
-console.log(`Plants#3 Score: 125 / 100\n
-- [x] When you click on the buttons:Gardens,Lawn,Planting the focus changes to services in the service section (50/50)\n
-- [x] Accordion in the prices section implementation of 3 drop-down lists about services and prices (50/50)\n
-- [x] In the contacts section select with a choice of cities is implemented (25/25)`);
-
 const burger = document.querySelector('.burger-btn')
 const menu = document.querySelector('.header')
 const navArea = document.querySelector('.list-nav')
@@ -162,49 +157,6 @@ PLANTING_BTN.addEventListener('click', function () {
     }
 })
 
-// const ACCORDION_BTNS_BASICS = document.querySelector(".accord-pic");
-// const ACCORDION_BTNS_STANDART = document.querySelector(".accord-pic2");
-// const ACCORDION_BTNS_PRO = document.querySelector(".accord-pic3");
-// const basicContent = document.querySelector(".basic-content")
-// const standartContent = document.querySelector(".standart-content")
-// const proContent = document.querySelector(".pro-content")
-
-// ACCORDION_BTNS_BASICS.addEventListener('click', function () {
-//     if (standartContent.classList.contains('is-open') ||
-//         proContent.classList.contains('is-open')) {
-//         standartContent.classList.remove('is-open') ||
-//             proContent.classList.remove('is-open')
-//         ACCORDION_BTNS_STANDART.classList.remove('click-btn-accordion')
-//         ACCORDION_BTNS_PRO.classList.remove('click-btn-accordion')
-//     }
-//     basicContent.classList.toggle('is-open')
-//     ACCORDION_BTNS_BASICS.classList.toggle('click-btn-accordion')
-// })
-
-// ACCORDION_BTNS_STANDART.addEventListener('click', function () {
-//     if (basicContent.classList.contains('is-open') ||
-//         proContent.classList.contains('is-open')) {
-//         basicContent.classList.remove('is-open') ||
-//             proContent.classList.remove('is-open')
-//         ACCORDION_BTNS_BASICS.classList.remove('click-btn-accordion')
-//         ACCORDION_BTNS_PRO.classList.remove('click-btn-accordion')
-//     }
-//     standartContent.classList.toggle('is-open')
-//     ACCORDION_BTNS_STANDART.classList.toggle('click-btn-accordion')
-// })
-
-// ACCORDION_BTNS_PRO.addEventListener('click', function () {
-//     if (basicContent.classList.contains('is-open') ||
-//         standartContent.classList.contains('is-open')) {
-//         basicContent.classList.remove('is-open') ||
-//             standartContent.classList.remove('is-open')
-//         ACCORDION_BTNS_BASICS.classList.remove('click-btn-accordion')
-//         ACCORDION_BTNS_STANDART.classList.remove('click-btn-accordion')
-//     }
-
-//     proContent.classList.toggle('is-open')
-//     ACCORDION_BTNS_PRO.classList.toggle('click-btn-accordion')
-// })
 const accordionBtns = document.querySelectorAll(".accordion");
 const accordionContents = [
     document.querySelector(".basic-content"),
