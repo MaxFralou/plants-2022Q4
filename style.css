@@ -65,7 +65,6 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 *,
@@ -487,7 +486,7 @@ body {
 
 .color-wrapper-prices {
     background-color: #FFFFFF;
-    height: 580px;
+    min-height: 580px;
 }
 
 .prices {
@@ -500,7 +499,6 @@ body {
 .caption-prices-contaner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: -40px;
 }
 
 .caption-prices {
@@ -716,7 +714,7 @@ body {
 /*PRICES END*/
 
 .color-container {
-    height: 500px;
+    min-height: 500px;
     background-color: #EDF2EC;
 }
 
@@ -1268,7 +1266,7 @@ body {
     }
 
     .color-wrapper-prices {
-        height: 535px;
+        min-height: 535px;
     }
 
     /*PRICES*/
@@ -1407,10 +1405,6 @@ body {
         margin: 93.5px auto;
         background-position: 50% 100%;
         background-size: 150px 147px;
-    }
-
-    .color-wrapper-prices {
-        height: 784px;
     }
 
     .service {
@@ -1792,13 +1786,12 @@ body {
     }
 
     .color-container {
-        height: 444px;
+        max-height: 444px;
     }
 
     .contacts {
         width: 84.7%;
         height: 100%;
-        margin: -268px auto 0 auto;
         background-position: 52.5% 100%;
         flex-direction: column;
         justify-content: flex-start;
@@ -1824,6 +1817,10 @@ body {
 
     .accordion-contacts::after {
         margin-left: 201px;
+    }
+
+    .dropdown-content {
+        margin-right: 30px;
     }
 
     .address-block {
